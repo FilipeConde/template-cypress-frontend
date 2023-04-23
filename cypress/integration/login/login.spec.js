@@ -1,9 +1,10 @@
 /// <reference types="cypress"/>
 
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
+import Homepage from '../../pages/Home.page.js'
 
-When('clicar em tal botão', () => {
-  // código para clicar em botão
+When('realizar login com {string} e {string}', (user, password) => {
+  Homepage.realizarLogin(user, password)
 })
 
 Then('deve conter as opções {string}', (lista) => {

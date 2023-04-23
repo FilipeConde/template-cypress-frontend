@@ -26,12 +26,16 @@ When('realizar uma requisição do tipo {string}', (metodoHttp) => {
 
 });
 
-Given('que satisfaça uma condição inicial genérica', () => {
-  // código para satisfazer uma condição genérica
+Given('que esteja na página inicial', () => {
+  cy.visit('/')
 })
 
 Then('deve conter o title {string}', (title) => {
   cy.validarTitle(title)
+})
+
+Then('deve acessar a página {string}', (rota) => {
+  cy.validarRota(rota)
 })
 
 And('deve exibir tal elemento', () => {
