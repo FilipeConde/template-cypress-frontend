@@ -3,7 +3,7 @@ const cucumber = require('cypress-cucumber-preprocessor').default
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'inserir aqui uma baseURL válida',  //dependendo do projeto, usar variáveis de ambiente
+    baseUrl: 'https://www.saucedemo.com/',  //dependendo do projeto, usar variáveis de ambiente
     chromeWebSecurity: false,
     watchForFileChanges: false,
     video: false,
