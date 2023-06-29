@@ -24,3 +24,7 @@ Cypress.Commands.add('validarElementosPorTexto', (elementos) => {
     cy.contains(elemento).should('exist').and('be.visible')
   });
 })
+
+Cypress.Commands.add('validarRota', (rota) => {
+  cy.url().should('contain', rota)
+})
